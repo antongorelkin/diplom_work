@@ -2034,7 +2034,7 @@
             }
             
             .footer__top-img {
-                margin-bottom: 12px;
+                margin-bottom: 14px;
             }
             
             .footer__top-link svg path {
@@ -2802,6 +2802,8 @@
                 }
                 .podcasts__card-stat {
                     padding-left: 35px;
+                    padding-top: 4px;
+                    padding-bottom: 4px;
                 }
                 .card-stat-btn {
                     font-size: 12px;
@@ -2821,7 +2823,11 @@
                     top: 99px;
                 }
                 .podcasts__item {
-                    margin-bottom: 33px;
+                    margin-bottom: 30px;
+                    max-height: 185px;
+                }
+                .podcasts__card-stat svg {
+                    vertical-align: middle;
                 }
                 .podcasts__btn-more {
                     padding: 15px 30px;
@@ -3116,7 +3122,9 @@
                     font-size: 16px;
                     line-height: 16px;
                     width: 235px;
-                    padding: 14px 12.5px;
+                    padding: 14px 0px;
+                    padding-left: 3.5px;
+                    padding-right: 14px;
                 }
                 .adv {
                     padding-bottom: 55px;
@@ -3182,13 +3190,14 @@
                 }
                 .checkbox span {
                     margin-bottom: 52px;
+                    font-size: 9px;
                 }
                 .footer__container-top {
                     align-items: flex-start;
                 }
                 .footer__top-right {
                     padding-left: 47px;
-                    margin-bottom: 53px;
+                    margin-bottom: 50px;
                 }
                 .footer__nav-list {
                     column-gap: 72px;
