@@ -1,5 +1,6 @@
             html {
                 box-sizing: border-box;
+                overflow-x: hidden;
             }
             
             .flex {
@@ -33,21 +34,22 @@
             
             body {
                 font-family: "Muller", "OpenSans", sans-serif;
+                margin: 0 auto;
             }
             
-            h1 {
+            .title {
                 margin: 0;
             }
             
-            h2 {
+            .section__title {
                 margin: 0;
             }
             
-            h3 {
+            .subtitle {
                 margin: 0;
             }
             
-            p {
+            .dscr {
                 margin: 0;
             }
             
@@ -106,14 +108,10 @@
                 flex-wrap: wrap;
             }
             
-            .header__top {
-                max-height: 80px;
-            }
-            
             .header__right {
                 width: 80%;
                 justify-content: space-between;
-                padding: 19px 0;
+                padding: 18px 0;
             }
             
             .header__burger-top {
@@ -140,6 +138,10 @@
                 background-color: var(--color__primary-dark);
             }
             
+            .header__nav-item:not(:last-child) {
+                margin-right: 59px;
+            }
+            
             .header__burger-closed {
                 display: none;
                 width: 23px;
@@ -157,7 +159,7 @@
             }
             
             .header__burger-closed svg {
-                transition: all .5s ease-in-out;
+                transition: fill .5s ease-in-out;
             }
             
             .header__burger-closed:hover svg rect {
@@ -220,14 +222,14 @@
             
             .header__nav-list {
                 width: 93.5%;
-                justify-content: space-between;
+                padding-left: 27px;
             }
             
             .header__nav-link {
                 font-weight: 400;
                 font-size: 20px;
                 line-height: 20px;
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .header__nav-link:hover {
@@ -263,7 +265,7 @@
                 border-bottom: 1px solid transparent;
                 outline: none;
                 background: transparent;
-                transition: all .4s ease-in-out;
+                transition: width .5s ease-in-out;
                 cursor: pointer;
             }
             
@@ -285,12 +287,12 @@
                 top: 0;
                 right: 0;
                 outline: none;
-                transition: all .4s ease-in-out;
+                transition: stroke .4s ease-in-out;
                 cursor: pointer;
             }
             
             .header__search svg path {
-                transition: all .5s ease-in-out;
+                transition: stroke .5s ease-in-out;
             }
             
             .header__search:focus svg path {
@@ -316,7 +318,7 @@
             }
             
             .header__entrance {
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .header__entrance:focus-visible {
@@ -344,11 +346,11 @@
             
             .header__bottom-list {
                 justify-content: space-between;
-                margin-right: 7px;
+                padding-left: 9px;
             }
             
             .header__bottom-item {
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
                 cursor: pointer;
             }
             
@@ -383,7 +385,7 @@
             }
             
             .header__bottom-btn-play:hover svg path {
-                transition: all .5s ease-in-out;
+                transition: fill .5s ease-in-out;
             }
             
             .header__bottom-btn-play:hover svg path {
@@ -492,7 +494,7 @@
             }
             
             .hero__text-link {
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .hero__text-link:hover {
@@ -573,6 +575,7 @@
                 position: relative;
                 max-width: 540px;
                 min-height: 100%;
+                max-height: 140px;
             }
             
             .podcasts__card-content {
@@ -583,16 +586,16 @@
             
             .podcasts__card-date {
                 position: absolute;
-                bottom: 0;
+                bottom: -1px;
+                left: -1px;
                 background-color: var(--background-color);
                 font-weight: 400;
                 font-size: 10px;
                 line-height: 10px;
                 color: var(--text-color-black);
-                width: 45px;
-                height: 15px;
-                padding: 3px 0px;
-                padding-left: 5px;
+                width: 51px;
+                height: 12px;
+                padding: 3px 2px;
                 text-align: center;
             }
             
@@ -605,7 +608,18 @@
             .podcasts__dscr-btn {
                 padding-top: 30px;
                 padding-right: 26px;
-                transition: all .5s ease-in-out;
+            }
+            
+            .podcasts__dscr-btn svg path {
+                transition: fill .5s ease-in-out;
+            }
+            
+            .podcasts__dscr-btn svg rect {
+                transition: fill .5s ease-in-out;
+            }
+            
+            .podcasts__dscr-btn svg circle {
+                transition: stroke .5s ease-in-out;
             }
             
             .podcasts__dscr-btn .podcasts__btn-pause {
@@ -696,11 +710,11 @@
             }
             
             .card-stat-btn span {
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .card-stat-btn svg path {
-                transition: all .5s ease-in-out;
+                transition: fill .5s ease-in-out;
             }
             
             .card-stat-btn:hover span {
@@ -749,7 +763,7 @@
                 border-radius: 40px;
                 color: var(--background-color-btn);
                 padding: 25px 54px;
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, border-color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .podcasts__btn-more:hover {
@@ -858,11 +872,11 @@
             .broadcasts__card-link {
                 width: 119px;
                 font-style: italic;
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .broadcasts__card-link svg path {
-                transition: all .5s ease-in-out;
+                transition: fill .5s ease-in-out;
             }
             
             .broadcasts__card-link:hover {
@@ -897,7 +911,7 @@
                 bottom: -7px;
                 left: -7px;
                 right: -7px;
-                transition: all .5s ease-in-out;
+                transition: opacity .5s ease-in-out;
                 opacity: 0;
             }
             
@@ -909,7 +923,7 @@
                 left: 0;
                 height: 149px;
                 background-color: var(--color-choices);
-                transition: all .5s ease-in-out;
+                transition: opacity .5s ease-in-out;
                 opacity: 0;
             }
             
@@ -961,11 +975,11 @@
             }
             
             .broadcasts__archive-btn {
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out, border .5s ease-in-out;
             }
             
             .broadcasts__archive-btn svg path {
-                transition: all .5s ease-in-out;
+                transition: stroke .5s ease-in-out;
             }
             
             .broadcasts__archive-btn:hover {
@@ -1038,7 +1052,7 @@
                 border: 1px solid var(--color-choices);
                 font-size: 16px;
                 background-color: var(--color-choices);
-                transition: all .4s ease-in-out;
+                transition: border-color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .choices:hover .choices__inner {
@@ -1083,7 +1097,7 @@
             .choices__list[aria-expanded] .choices__item--selectable.is-highlighted {
                 background-color: var(--color-light);
                 color: var(--text-color-black);
-                transition: all .5s ease-in-out;
+                transition: background-color .5s ease-in-out;
             }
             
             .choices__list--dropdown .choices__item--selectable.is-highlighted:hover {
@@ -1104,7 +1118,7 @@
                 border: 1px solid var(--border-color);
                 border-top: none;
                 border-radius: 0 0 10px 10px;
-                width: 255px;
+                width: 253px;
             }
             /* guests */
             
@@ -1161,7 +1175,7 @@
                 padding: 34px 50px 34px 0;
                 border-top: 1px solid var(--color-grey);
                 border-bottom: 1px solid var(--color-grey);
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
                 cursor: pointer;
                 width: 680px;
             }
@@ -1183,10 +1197,12 @@
             
             .guests__accordion-title:hover~svg circle {
                 stroke: var(--color-light);
+                transition: stroke .5s ease-in-out;
             }
             
             .guests__accordion-title:hover~svg path {
                 stroke: var(--color-light);
+                transition: stroke .5s ease-in-out;
             }
             
             .guests__accordion-title:focus {
@@ -1195,6 +1211,7 @@
             
             .guests__accordion-title:focus~svg {
                 fill: var(--background-color-btn);
+                transition: fill .5s ease-in-out;
             }
             
             .guests__accordion-title:active {
@@ -1227,7 +1244,6 @@
                 position: absolute;
                 right: 0;
                 top: 20px;
-                transition: all .5s ease-in-out;
             }
             
             .guests__nav-list {
@@ -1550,7 +1566,7 @@
                 background-color: var(--background-color-btn);
             }
             
-            .playlists__card:hover .playlists__card-dscr h2 {
+            .playlists__card:hover .playlists__card-dscr h3 {
                 color: var(--color-text-white);
                 transition: all .5s ease-in-out;
             }
@@ -1564,7 +1580,7 @@
                 opacity: 1;
             }
             
-            .playlists__card:focus-visible .playlists__card-dscr h2 {
+            .playlists__card:focus-visible .playlists__card-dscr h3 {
                 color: var(--text-color-black);
             }
             
@@ -1715,7 +1731,7 @@
                 width: 273px;
                 align-items: center;
                 padding: 23px 13.5px;
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .adv__link svg {
@@ -1728,7 +1744,7 @@
             }
             
             .adv__link svg {
-                transition: all .5s ease-in-out;
+                transition: fill 2s ease-in-out;
             }
             
             .adv__link:hover svg path:first-child {
@@ -1749,7 +1765,7 @@
             /* about */
             
             .about {
-                padding-top: 94px;
+                padding-top: 97px;
                 background-color: var(--text-color-black);
                 padding-left: 15px;
                 padding-bottom: 1px;
@@ -1766,7 +1782,7 @@
                 font-size: 48px;
                 line-height: 100%;
                 color: var(--color-text-white);
-                margin-bottom: 10px;
+                margin-bottom: 15px;
             }
             
             .about__subtitle {
@@ -1795,7 +1811,7 @@
             }
             
             .swiper-slide-text {
-                padding-top: 30px;
+                padding-top: 25px;
             }
             
             .swiper-slide-subtitle {
@@ -1858,6 +1874,7 @@
                 color: var(--color-text-white);
                 font-size: 20px;
                 margin-bottom: 20px;
+                transition: border-color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .about__form-name {
@@ -1870,7 +1887,7 @@
                 height: 70px;
                 padding-left: 32px;
                 font-size: 20px;
-                transition: all .5s ease-in-out;
+                transition: border-color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .about__form-input:nth-child(2) {
@@ -1899,7 +1916,7 @@
                 padding-left: 32px;
                 font-size: 20px;
                 color: var(--color-text-white);
-                transition: all .5s ease-in-out;
+                transition: background-color .5s ease-in-out, border-color .5s ease-in-out;
             }
             
             .about__form-btn {
@@ -1910,7 +1927,7 @@
                 padding: 25px 54px;
                 background-color: var(--background-color-btn);
                 border-radius: 40px;
-                transition: all .5s ease-in-out;
+                transition: background-color .5s ease-in-out, border-color .5s ease-in-out;
             }
             
             .is-invalid {
@@ -1995,7 +2012,7 @@
                 width: 15px;
                 height: 15px;
                 border: 1px solid #FFFFFF;
-                transition: all .5s ease-in-out;
+                transition: border-color .5s ease-in-out;
             }
             
             .checkbox:hover span::before {
@@ -2019,7 +2036,7 @@
                 background-image: url('../img/about_check.png');
                 background-repeat: no-repeat;
                 background-position: center;
-                top: 2px;
+                top: 0;
                 left: 0;
             }
             
@@ -2038,7 +2055,7 @@
             }
             
             .footer__top-link svg path {
-                transition: all .5s ease-in-out;
+                transition: fill .5s ease-in-out;
             }
             
             .footer__top-link:hover svg path {
@@ -2088,7 +2105,7 @@
                 line-height: 16px;
                 color: var(--color-text-white);
                 padding: 2px;
-                transition: all .5s ease-in-out;
+                transition: color .5s ease-in-out, background-color .5s ease-in-out;
             }
             
             .footer__nav-link:hover {
@@ -2583,13 +2600,16 @@
                 }
             }
             
-            @media (max-width: 570px) {
+            @media (max-width: 600px) {
                 .container {
                     max-width: 256px;
                     padding: 0 15px;
                 }
                 .header::before {
                     height: 55px;
+                }
+                .header__form-input {
+                    max-width: 150px;
                 }
                 .header__left {
                     padding-left: 0;
@@ -2625,11 +2645,14 @@
                     height: 225px;
                     min-width: 0;
                     width: 280px;
-                    padding-left: 42px;
+                    padding-left: 30px;
                     padding-top: 40px;
                 }
                 .header__burger-closed.is-active {
                     left: 5%;
+                }
+                .header__nav-item:not(:last-child) {
+                    margin-right: 0;
                 }
                 .header__bottom-nav {
                     position: absolute;
@@ -2645,14 +2668,21 @@
                     display: block;
                     columns: 2;
                     column-gap: 70px;
+                    background-color: var(--color-text-white);
+                    padding-left: 20px;
+                    padding-top: 26px;
                 }
                 .header__bottom-item {
                     margin-bottom: 25px;
                     margin-right: 10px;
                 }
                 .header__bottom--active {
-                    background-color: var(--color-text-white);
+                    background-color: rgba(230, 232, 236, 0.4);
                     display: flex;
+                }
+                .header__bottom-nav--active {
+                    display: flex;
+                    background-color: var(--color-text-white);
                 }
                 .header__container-bottom {
                     justify-content: center;
@@ -2671,7 +2701,7 @@
                     transition: all .5s ease-in-out;
                 }
                 .header__bottom-btn svg {
-                    transition: all .5s ease-in-out;
+                    transition: transform .5s ease-in-out;
                 }
                 .header__bottom-btn--active svg {
                     transform: rotate(-45deg);
@@ -2775,6 +2805,7 @@
                 }
                 .podcasts__card {
                     flex-direction: column;
+                    max-height: 185px;
                 }
                 .podcasts__card-date {
                     top: 0;
@@ -3022,7 +3053,7 @@
                     text-align: center;
                     height: 35px;
                     min-width: 113px;
-                    transition: all .5s ease-in-out;
+                    transition: color .5s ease-in-out, background-color .5s ease-in-out;
                 }
                 .playlists__swiper-btn:hover {
                     background-color: var(--background-color-btn);

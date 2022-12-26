@@ -91,7 +91,7 @@ burger.addEventListener('click',
     function() {
 
 
-        down.classList.toggle('header__bottom--active')
+        down.classList.toggle('header__bottom-nav--active')
         menu.classList.toggle('nav--active');
 
         document.querySelector('.header__burger-closed').classList.toggle('is-active');
@@ -103,7 +103,7 @@ burger.addEventListener('click',
 closed.addEventListener('click', function() {
 
     document.querySelector('.header__nav').classList.toggle('nav--active');
-    document.querySelector('.header__bottom-nav').classList.toggle('header__bottom--active')
+    document.querySelector('.header__bottom-nav').classList.toggle('header__bottom-nav--active')
     document.querySelector('.header__burger-closed').classList.toggle('is-active');
 });
 menuLinks.forEach(function(el) {
