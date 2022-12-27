@@ -1358,14 +1358,17 @@
             
             .tabs-item__link:hover svg path {
                 fill: var(--background-color-btn);
+                transition: fill .5s ease-in-out;
             }
             
             .tabs-item__link:focus-visible svg path {
                 fill: var(--color-light);
+                transition: fill .5s ease-in-out;
             }
             
             .tabs-item__link:active svg path {
                 fill: var(--color__primary-dark);
+                transition: fill .5s ease-in-out;
             }
             /* playlists */
             
@@ -1468,11 +1471,13 @@
             
             .playlists__select-choice>.playlists__select-custom-btn:hover::before {
                 border-color: var(--background-color-btn);
+                transition: border-color .5s ease-in-out;
             }
             
             .playlists__select-choice>.playlists__select-custom-btn:focus::before {
                 background-color: var(--color-grey);
                 border-color: var(--background-color-btn);
+                transition: background-color .5s ease-in-out, border-color .5s ease-in-out;
             }
             
             .playlists__content-list {
@@ -1743,16 +1748,14 @@
                 color: var(--text-color-black);
             }
             
-            .adv__link svg {
-                transition: fill 2s ease-in-out;
-            }
-            
             .adv__link:hover svg path:first-child {
                 fill: var(--text-color-black);
+                transition: fill .5s ease-in-out;
             }
             
             .adv__link:hover svg path:nth-child(2n) {
-                fill: var(--color-text-adv)
+                fill: var(--color-text-adv);
+                transition: fill .5s ease-in-out;
             }
             
             .adv__link:focus-visible {

@@ -25,7 +25,7 @@ const choices = new Choices(element, {
 $(function() {
     $('.guests__accordion-list').accordion({
         heightStyle: "content",
-        active: true,
+
         collapsible: true,
         icons: false
     })
@@ -67,7 +67,7 @@ validation
     .addField('#name', [{
         rule: 'required',
         required: true,
-        errorMessage: 'Ошибка'
+        errorMessage: 'Введите имя'
     }, {
         rule: 'maxLength',
         value: 30,
@@ -77,10 +77,10 @@ validation
     }, ])
     .addField('#email', [{
         rule: 'required',
-        errorMessage: 'Ошибка',
+        errorMessage: 'Введите e-mail',
     }, {
         rule: 'email',
-        errorMessage: 'Ошибка',
+        errorMessage: 'Неккоректный e-mail',
     }, ]);
 let closed = document.querySelector('.header__burger-closed');
 let burger = document.querySelector('.header__burger-top');
