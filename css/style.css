@@ -458,6 +458,7 @@
 
             .hero__text {
                 max-width: 693px;
+                padding-left: 9px;
             }
 
             .hero__text-title {
@@ -466,7 +467,6 @@
                 line-height: 100%;
                 margin: 0;
                 padding-top: 95px;
-                padding-left: 5px;
                 margin-bottom: 11px;
             }
 
@@ -479,7 +479,6 @@
                 font-size: 16px;
                 line-height: 150%;
                 margin: 0;
-                padding-left: 9px;
                 margin-bottom: 71px;
             }
 
@@ -490,7 +489,6 @@
                 padding: 25px 54px;
                 border-radius: 40px;
                 background-color: var(--background-color-btn);
-                margin-left: 9px;
             }
 
             .hero__text-link {
@@ -542,7 +540,6 @@
                 width: 48.5%;
                 background-color: var(--color-text-white);
                 margin-bottom: 30px;
-                max-height: 140px;
             }
 
             .podcasts__item:nth-child(n+9) {
@@ -576,6 +573,10 @@
                 max-width: 540px;
                 min-height: 100%;
                 max-height: 140px;
+            }
+
+            .podcasts__card img {
+                height: 100%;
             }
 
             .podcasts__card-content {
@@ -1836,23 +1837,22 @@
                 position: relative;
             }
 
+            .swiper-button-next:after,
+            .swiper-rtl .swiper-button-prev:after,
             .swiper-button-prev:after,
             .swiper-rtl .swiper-button-next:after {
-                content: url('../img/prev.png');
-            }
-
-            .swiper-button-next:after,
-            .swiper-rtl .swiper-button-prev:after {
-                content: url('../img/next.png');
+                display: none;
             }
 
             .swiper-button-next {
+                width: 48px;
                 right: -65px;
                 left: auto;
                 top: -259px;
             }
 
             .swiper-button-prev {
+                width: 48px;
                 left: -68px;
                 top: -259px;
             }
@@ -2093,7 +2093,6 @@
             }
 
             .footer__nav-list {
-                max-height: 100px;
                 flex-wrap: wrap;
                 columns: 3;
                 column-gap: 109px;
@@ -2158,9 +2157,6 @@
                     height: 60px;
                     background-color: var(--border-color);
                     opacity: .5;
-                }
-                .header__top {
-                    max-height: 140px;
                 }
                 .header__left {
                     z-index: 2;
@@ -2622,12 +2618,14 @@
                 .header__right {
                     position: relative;
                     min-width: 280px;
+                    padding: 0;
+                    padding-top: 21px;
                 }
                 .header__entrance {
                     padding: 7.5px 24px;
                     position: absolute;
                     right: 12px;
-                    top: -79%;
+                    top: -108%;
                 }
                 .header__burger-top {
                     top: -10px;
@@ -2710,9 +2708,6 @@
                 .header__bottom-btn--active svg {
                     transform: rotate(-45deg);
                 }
-                .header__top {
-                    max-height: 104px;
-                }
                 .header__bottom {
                     padding: 0;
                 }
@@ -2790,7 +2785,6 @@
                     font-size: 16px;
                     line-height: 16px;
                     padding: 17px 45px;
-                    margin-left: 0;
                 }
                 .hero {
                     padding-bottom: 55px;
@@ -2809,7 +2803,7 @@
                 }
                 .podcasts__card {
                     flex-direction: column;
-                    max-height: 185px;
+                    max-height: none;
                 }
                 .podcasts__card-date {
                     top: 0;
@@ -2858,8 +2852,7 @@
                     top: 99px;
                 }
                 .podcasts__item {
-                    margin-bottom: 30px;
-                    max-height: 185px;
+                    margin-bottom: 29px;
                 }
                 .podcasts__card-stat svg {
                     vertical-align: middle;
@@ -3139,7 +3132,7 @@
                     margin-bottom: 40px;
                 }
                 .adv__text::before {
-                    top: 9.5%;
+                    top: 10.5%;
                 }
                 .adv__dscr {
                     font-size: 14px;
@@ -3171,7 +3164,8 @@
                 }
                 .about__title {
                     font-size: 24px;
-                    line-height: 100%
+                    line-height: 100%;
+                    margin-bottom: 10px;
                 }
                 .about__subtitle {
                     font-size: 14px;
@@ -3239,7 +3233,6 @@
                     height: 165px;
                     padding-top: 27px;
                     columns: 2;
-                    max-height: 165px;
                 }
                 .footer__nav-item {
                     margin-bottom: 18px;
