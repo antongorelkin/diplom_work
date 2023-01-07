@@ -3038,6 +3038,7 @@
                 .playlists__swiper {
                     display: block;
                     margin-bottom: 31px;
+                    overflow: hidden;
                 }
                 .playlists__swiper-btn {
                     font-weight: 500;
