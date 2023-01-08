@@ -1857,6 +1857,58 @@
                 top: -259px;
             }
 
+            .swiper-button-next:hover svg circle {
+                stroke: var(--color-light);
+                transition: stroke .5s ease-in-out;
+            }
+
+            .swiper-button-prev:hover svg circle {
+                stroke: var(--color-light);
+                transition: stroke .5s ease-in-out;
+            }
+
+            .swiper-button-next:hover svg path {
+                stroke: var(--color-light);
+                transition: stroke .5s ease-in-out;
+            }
+
+            .swiper-button-prev:hover svg path {
+                stroke: var(--color-light);
+                transition: stroke .5s ease-in-out;
+            }
+
+            .swiper-button-next:focus-visible svg circle {
+                stroke: var(--color-light);
+            }
+
+            .swiper-button-next:focus-visible svg path {
+                stroke: var(--color-light);
+            }
+
+            .swiper-button-prev:focus-visible svg circle {
+                stroke: var(--color-light);
+            }
+
+            .swiper-button-prev:focus-visible svg path {
+                stroke: var(--color-light);
+            }
+
+            .swiper-button-prev:active svg circle {
+                stroke: var(--background-color-btn);
+            }
+
+            .swiper-button-prev:active svg path {
+                stroke: var(--background-color-btn);
+            }
+
+            .swiper-button-next:active svg circle {
+                stroke: var(--background-color-btn);
+            }
+
+            .swiper-button-next:active svg path {
+                stroke: var(--background-color-btn);
+            }
+
             .about__form {
                 max-width: 920px;
                 margin-bottom: 9px;
@@ -3017,6 +3069,10 @@
                     padding-top: 55px;
                     padding-bottom: 190px;
                 }
+                .playlists__radio {
+                    max-width: 286px;
+                    margin-right: 0;
+                }
                 .playlists__subtitle {
                     font-size: 12px;
                     line-height: 12px;
@@ -3039,6 +3095,7 @@
                     display: block;
                     margin-bottom: 31px;
                     overflow: hidden;
+                    max-width: 286px;
                 }
                 .playlists__swiper-btn {
                     font-weight: 500;
