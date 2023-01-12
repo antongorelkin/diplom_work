@@ -173,3 +173,4 @@ const swiper = new Swiper('.swiper-container', {
 
 
 });
+const modal = new GraphModal();
