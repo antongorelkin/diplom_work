@@ -204,7 +204,7 @@
                 }
                 
                 .graph-modal__btn:active {
-                    background-color: var(--color__primary-dark);
+                    border-color: var(--color__primary-dark);
                 }
                 
                 .graph-modal__list {
@@ -2882,7 +2882,7 @@
                         width: 28px;
                         height: 28px;
                         border: 2px solid var(--color-grey);
-                        padding: 5px;
+                        padding: 1px;
                     }
                     .graph-modal__close svg {
                         width: 21px;
